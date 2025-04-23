@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn How to Create a Well-Structured HTML5 Webpage With This Beginner's Guide!">
+    <title>HTML5 Basics for Beginners</title>
+    <base href="https://github.com/tabiangel/Week_6/blob/main/Week_6.html">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to HTML5 Basics</h1>
+        <p>Start Your Journey Towards Mastering Web Development!</p>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+        <ul>
+            <li><a href="Introduction">Introduction</a></li>
+            <li><a href="Requirements">Requirements</a></li>
+        </ul>
+    </nav>
+
+</body>
+
+</html>

@@ -22,8 +22,71 @@
         <ul>
             <li><a href="Introduction">Introduction</a></li>
             <li><a href="Requirements">Requirements</a></li>
+            <li><a href="https://validator.w3.org/" target="_blank">HTML Validator</a></li>
         </ul>
     </nav>
+
+    <!-- Main Content Section -->
+    <main>
+        <section id="introduction">
+            <h2>What is HTML5?</h2>
+            <p>HTML5 is the standard markup language used to create web pages. It introduces semantic elements that improve accessibility and structure.</p>
+        </section>
+
+        <section id="requirements">
+            <h2>Requirements for Creating an HTML5 Webpage</h2>
+            <ol>
+                <li>Apply proper document structure with metadata in the <code>&lt;head&gt;</code>.</li>
+                <li>Use semantic sectioning elements for meaningful organization.</li>
+                <li>Enhance readability with text-level semantics.</li>
+                <li>Include hyperlinks with meaningful attributes.</li>
+                <li>Validate your HTML using the <a href="https://validator.w3.org/" target="_blank">W3C Markup Validator</a>.</li>
+            </ol>
+        </section>
+
+        <section id="table-example">
+            <h2>Example Table</h2>
+            <p>Here’s how you can use a table to organize data:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>HTML Tag</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>&lt;header&gt;</code></td>
+                        <td>Defines the header section of a webpage.</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;footer&gt;</code></td>
+                        <td>Defines the footer section of a webpage.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Sidebar Section -->
+    <aside>
+        <h3>Pro Tip</h3>
+        <p>Use <em>GitHub Pages</em> to make your webpage live and accessible to others!</p>
+    </aside>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 HTML5 Learning Hub</p>
+        <p><a href="top">Back to Top</a></p>
+    </footer>
+
+    <!-- The Code Used to Create Webpage Section -->
+    <section>
+        <h2>The Code Used to Create Webpage</h2>
+        <img src="home/tabithaangel26/My_files/Downloads/Week_6_pic_1" alt="Code Snippet 1">
+        <img src="home/tabithaangel26/My_files/Downloads/Week_6_pic_2" alt="Code Snippet 2">
+        <img src="home/tabithaangel26/My_files/Downloads/Week_6_pic_3" alt="Code Snippet 3">
+    </section>
 
 </body>
 

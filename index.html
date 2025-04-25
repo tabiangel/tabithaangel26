@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Hawaiian Pizza Sliders Recipe</title>
-
-    <!-- CSS Stylesheet to improve appearance -->
+    
+    <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- Google Fonts for better text styling -->
+    
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
-
+    
+    <!-- Metadata -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Tabitha Goins">
     <meta name="description" content="Delicious recipe for Hawaiian pizza sliders, perfect for parties.">
+    <meta name="keywords" content="Hawaiian Pizza Sliders, Quick Recipes, Party Food">
 </head>
-
 <body>
+    <!-- Skip to Main Content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Page Header -->
     <header>
-        <h1>Hawaiian Pizza Sliders Recipe</h1>
-        <img src="images/slider-dish.jpg" alt="Completed Hawaiian Pizza Sliders">
+        <h1 id="header-title">Hawaiian Pizza Sliders Recipe</h1>
+        <img src="images/slider-dish.jpg" alt="A plated dish of Hawaiian pizza sliders with golden-brown tops">
     </header>
-
+    
     <!-- Navigation Menu -->
     <nav>
         <ul>
-            <li><a href="#ingredients">Ingredients</a></li>
-            <li><a href="#instructions">Instructions</a></li>
-            <li><a href="#contact">Contact Info</a></li>
+            <li><a href="#ingredients" class="nav-link">Ingredients</a></li>
+            <li><a href="#instructions" class="nav-link">Instructions</a></li>
+            <li><a href="#contact" class="nav-link">Contact Info</a></li>
         </ul>
     </nav>
 
-    <main>
+    <main id="main-content">
         <!-- Ingredients Section -->
         <section id="ingredients">
-            <h2>Ingredients</h2>
+            <h2 class="section-title">Ingredients</h2>
             <ul>
                 <li>12 Hawaiian bread rolls</li>
                 <li>1/2 cup pizza sauce</li>
@@ -47,10 +50,10 @@
                 <li>Pinch of salt and pepper</li>
             </ul>
         </section>
-
+        
         <!-- Instructions Section -->
         <section id="instructions">
-            <h2>Instructions</h2>
+            <h2 class="section-title">Instructions</h2>
             <ol>
                 <li>Preheat oven to 350°F (175°C).</li>
                 <li>Slice rolls horizontally and place bottoms on a baking sheet.</li>
@@ -60,16 +63,16 @@
                 <li>Bake for 15 minutes or until rolls are golden brown.</li>
             </ol>
         </section>
-
+        
         <!-- Nutrition Facts Table -->
         <section>
-            <table>
+            <table id="nutrition-facts">
                 <caption>Nutrition Facts</caption>
                 <thead>
                     <tr>
-                        <th>Nutrient</th>
-                        <th>Amount</th>
-                        <th>Daily Value</th>
+                        <th scope="col">Nutrient</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Daily Value</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -86,23 +89,26 @@
                 </tbody>
             </table>
         </section>
-
+        
         <!-- User Feedback Form -->
         <section>
-            <form action="#" method="post">
+            <form action="#" method="post" id="feedback-form">
                 <fieldset>
                     <legend>Rate the Hawaiian Pizza Sliders</legend>
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" class="form-input" required>
+                    
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" class="form-input" required>
+                    
                     <label for="rating">Rating:</label>
-                    <select id="rating" name="rating" required>
+                    <select id="rating" name="rating" class="form-input" required>
                         <option value="5">5 Stars</option>
                         <option value="4">4 Stars</option>
                         <option value="3">3 Stars</option>
                     </select>
-                    <button type="submit">Submit</button>
+                    
+                    <button type="submit" class="form-button">Submit</button>
                 </fieldset>
             </form>
         </section>
@@ -110,7 +116,7 @@
 
     <!-- Contact Info -->
     <footer id="contact">
-        <p>Recipe by Tabitha Goins</p>
+        <p id="author-info">Recipe by Tabitha Goins</p>
         <p>Contact: <a href="mailto:tabithaangel26@gmail.com">tabithaangel26@gmail.com</a></p>
     </footer>
 </body>

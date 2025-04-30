@@ -11,16 +11,19 @@
     <meta name="keywords" content="Hawaiian Pizza Sliders, Quick Recipes, Party Food">
 
     <style>
-        /* CSS Box Model Enhancements */
+        /* General Styling */
         html {
-            font-size: 16px;
-            background-color: #ffe6cc;
-            color: #333;
+            font-size: 100%;
             font-family: 'Roboto', sans-serif;
         }
 
         body {
-            margin: 0;
+            max-width: 100%;
+            margin: auto;
+            font-size: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .skip-link {
@@ -39,19 +42,16 @@
 
         /* Header Styling */
         header {
-            width: 50vw;
-            margin: auto;
+            width: 100%;
             text-align: center;
             background-color: #ffcc80;
             padding: 2rem;
             border-bottom: 5px solid #ff6600;
         }
 
-        /* Typography Enhancements */
         h1 {
             border: 2px solid black;
-            font-size: 5em;
-            text-align: center;
+            font-size: clamp(2rem, 5vw, 5em);
             text-transform: uppercase;
             text-decoration: underline;
             font-weight: 900;
@@ -65,14 +65,23 @@
 
         /* Navigation */
         nav ul {
-            list-style: none;
-            padding: 0;
-            text-align: center;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            list-style-position: inside;
+            width: 100%;
+        }
+
+        nav ul li {
+            list-style-type: none;
         }
 
         .nav-link {
             text-decoration: none;
-            color: #0066cc;
+            color: white;
             margin: 0 1rem;
             padding: 0.5em;
             font-weight: bold;
@@ -84,48 +93,44 @@
             text-decoration: underline;
         }
 
-        /* Section Styling */
-        section {
-            width: 50vw;
-            margin: 2em auto;
-            padding: 1em;
+        /* Flexbox Layout */
+        .main {
+            display: flex;
+            gap: 10px;
+            flex-flow: row wrap;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .main_article, .secondary_article {
+            margin: auto;
+            max-width: clamp(320px, 40%, 1000px);
             border: 2px solid #333;
+            padding: 1rem;
             box-sizing: border-box;
-            line-height: 1.5;
         }
 
-        #ingredients {
-            background-color: hsl(50, 100%, 90%);
-            color: hsl(30, 100%, 40%);
-            padding: 1em;
-            font-style: italic;
-        }
-
-        #instructions {
-            background-color: rgba(255, 215, 0, 0.2);
-            padding: 1.5em;
-        }
-
-        /* Table Formatting */
-        #nutrition-facts {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1em auto;
-            padding: 1em;
-        }
-
-        #nutrition-facts th, #nutrition-facts td {
-            border: 1px solid #333;
-            padding: 0.5em;
-            text-align: left;
+        /* Image Styling */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
         }
 
         /* Form Enhancements */
-        .form-input, .form-button {
+        .form-input, .form-textarea, .form-button {
             font-size: 1rem;
             padding: 0.5em;
             margin: 0.5em;
             border-radius: 5px;
+            border: 1px solid #333;
+        }
+
+        .form-textarea {
+            width: 100%;
+            height: 100px;
+            resize: vertical;
         }
 
         .form-button {
@@ -141,33 +146,11 @@
 
         /* Footer */
         footer {
-            width: 50vw;
-            margin: auto;
+            width: 100%;
             text-align: center;
             padding: 1rem 0;
             background-color: #ffcc80;
             border-top: 5px solid #ff6600;
-        }
-
-        /* Text Styling */
-        .underline-text {
-            text-decoration: underline;
-        }
-
-        .strike-through-text {
-            text-decoration: line-through;
-        }
-
-        .multi-decoration {
-            text-decoration: overline double green 5px;
-        }
-
-        .kerning-example {
-            letter-spacing: 2px;
-        }
-
-        .word-spacing-example {
-            word-spacing: 5px;
         }
     </style>
 </head>
@@ -180,7 +163,10 @@
     <!-- Header -->
     <header>
         <h1>Hawaiian Pizza Sliders Recipe</h1>
-        <img src="images/slider-dish.jpg" alt="Plated Hawaiian pizza sliders">
+        <figure>
+            <img src="images/slider-dish.jpg" alt="Plated Hawaiian pizza sliders">
+            <figcaption>Delicious Hawaiian pizza sliders ready to serve</figcaption>
+        </figure>
     </header>
 
     <!-- Navigation -->
@@ -221,22 +207,16 @@
             </ol>
         </section>
 
-        <!-- Nutrition Facts Table -->
-        <section>
-            <table id="nutrition-facts">
-                <caption>Nutrition Facts</caption>
-                <thead>
-                    <tr>
-                        <th>Nutrient</th>
-                        <th>Amount</th>
-                        <th>Daily Value</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>Calories</td><td>250</td><td>12%</td></tr>
-                    <tr><td>Protein</td><td>10g</td><td>20%</td></tr>
-                </tbody>
-            </table>
+        <!-- Main Content with Flexbox -->
+        <section class="main">
+            <article class="main_article">
+                <h2>Why Flexbox is Great</h2>
+                <p>Flexbox helps create responsive layouts that adjust automatically based on screen size.</p>
+            </article>
+            <article class="main_article">
+                <h2>Optimized for All Devices</h2>
+                <p>Using flex properties like `justify-content` and `flex-wrap` allows content to adapt fluidly.</p>
+            </article>
         </section>
 
         <!-- Feedback Form -->
@@ -244,15 +224,25 @@
             <form action="#" method="post">
                 <fieldset>
                     <legend>Rate the Hawaiian Pizza Sliders</legend>
+
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" class="form-input" required>
+
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" class="form-input" required>
+
                     <label for="rating">Rating:</label>
                     <select id="rating" name="rating" class="form-input" required>
                         <option value="5">5 Stars</option>
                         <option value="4">4 Stars</option>
+                        <option value="3">3 Stars</option>
+                        <option value="2">2 Stars</option>
+                        <option value="1">1 Star</option>
                     </select>
+
+                    <label for="comments">Leave a Comment:</label>
+                    <textarea id="comments" name="comments" class="form-textarea" placeholder="Share your thoughts..." required></textarea>
+
                     <button type="submit" class="form-button">Submit</button>
                 </fieldset>
             </form>

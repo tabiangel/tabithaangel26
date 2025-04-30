@@ -9,18 +9,18 @@
     <meta name="author" content="Tabitha Goins">
     <meta name="description" content="Delicious recipe for Hawaiian pizza sliders, perfect for parties.">
     <meta name="keywords" content="Hawaiian Pizza Sliders, Quick Recipes, Party Food">
-    
+
     <style>
         /* CSS Box Model Enhancements */
         html {
             font-size: 16px;
             background-color: #ffe6cc;
             color: #333;
+            font-family: 'Roboto', sans-serif;
         }
-        
+
         body {
             margin: 0;
-            font-family: 'Roboto', sans-serif;
         }
 
         .skip-link {
@@ -37,14 +37,30 @@
             top: 0;
         }
 
-        /* Header Styling with Box Model */
+        /* Header Styling */
         header {
             width: 50vw;
             margin: auto;
             text-align: center;
             background-color: #ffcc80;
             padding: 2rem;
-            border-bottom: 5px solid #ff6600; /* Added border */
+            border-bottom: 5px solid #ff6600;
+        }
+
+        /* Typography Enhancements */
+        h1 {
+            border: 2px solid black;
+            font-size: 5em;
+            text-align: center;
+            text-transform: uppercase;
+            text-decoration: underline;
+            font-weight: 900;
+        }
+
+        h2 {
+            text-transform: capitalize;
+            font-size: 2em;
+            text-decoration: overline;
         }
 
         /* Navigation */
@@ -59,6 +75,8 @@
             color: #0066cc;
             margin: 0 1rem;
             padding: 0.5em;
+            font-weight: bold;
+            text-transform: uppercase;
         }
 
         .nav-link:hover {
@@ -66,19 +84,21 @@
             text-decoration: underline;
         }
 
-        /* Section Styling with Margins, Padding, and Box Sizing */
+        /* Section Styling */
         section {
             width: 50vw;
             margin: 2em auto;
             padding: 1em;
             border: 2px solid #333;
-            box-sizing: border-box; /* Includes padding & border within width */
+            box-sizing: border-box;
+            line-height: 1.5;
         }
 
         #ingredients {
             background-color: hsl(50, 100%, 90%);
             color: hsl(30, 100%, 40%);
             padding: 1em;
+            font-style: italic;
         }
 
         #instructions {
@@ -92,20 +112,12 @@
             border-collapse: collapse;
             margin: 1em auto;
             padding: 1em;
-            box-sizing: border-box;
         }
 
         #nutrition-facts th, #nutrition-facts td {
             border: 1px solid #333;
             padding: 0.5em;
             text-align: left;
-        }
-
-        /* Content Styling */
-        h1 {
-            border: 1px solid black;
-            font-size: 5em;
-            text-align: center;
         }
 
         /* Form Enhancements */
@@ -136,8 +148,30 @@
             background-color: #ffcc80;
             border-top: 5px solid #ff6600;
         }
+
+        /* Text Styling */
+        .underline-text {
+            text-decoration: underline;
+        }
+
+        .strike-through-text {
+            text-decoration: line-through;
+        }
+
+        .multi-decoration {
+            text-decoration: overline double green 5px;
+        }
+
+        .kerning-example {
+            letter-spacing: 2px;
+        }
+
+        .word-spacing-example {
+            word-spacing: 5px;
+        }
     </style>
 </head>
+
 <body>
 
     <!-- Skip to Main Content -->
@@ -159,6 +193,7 @@
     </nav>
 
     <main id="main-content">
+
         <!-- Ingredients Section -->
         <section id="ingredients">
             <h2>Ingredients</h2>
@@ -222,6 +257,7 @@
                 </fieldset>
             </form>
         </section>
+
     </main>
 
     <!-- Footer -->

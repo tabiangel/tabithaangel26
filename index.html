@@ -52,23 +52,7 @@
             "carbohydrateContent": "30g",
             "cholesterolContent": "25mg",
             "sodiumContent": "400mg"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "150"
-        },
-        "review": [
-            {
-                "@type": "Review",
-                "author": "John Doe",
-                "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5"
-                },
-                "reviewBody": "Fantastic recipe! Quick and delicious."
-            }
-        ]
+        }
     }
     </script>
 
@@ -145,16 +129,28 @@
         </table>
     </section>
 
-    <!-- Main Content with Flexbox -->
-    <section class="main">
-        <article class="main_article">
-            <h2>Social Media</h2>
-            <p>Follow us on Instagram, X, and Facebook!</p>
-        </article>
-        <article class="main_article">
-            <h2>Enjoy Anytime</h2>
-            <p>This recipe is easy and delicious any day. It is fast so it can even be enjoyed on the weekdays.</p>
-        </article>
+    <!-- Feedback Form -->
+    <section>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Rate the Hawaiian Pizza Sliders</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" class="form-input" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="form-input" required>
+                <label for="rating">Rating:</label>
+                <select id="rating" name="rating" class="form-input" required>
+                    <option value="5">5 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="2">2 Stars</option>
+                    <option value="1">1 Star</option>
+                </select>
+                <label for="comments">Leave a Comment:</label>
+                <textarea id="comments" name="comments" class="form-textarea" required></textarea>
+                <button type="submit" class="form-button">Submit</button>
+            </fieldset>
+        </form>
     </section>
 
     <!-- Footer with Contact Info -->

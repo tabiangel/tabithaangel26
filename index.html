@@ -47,7 +47,11 @@
         "nutrition": {
             "@type": "NutritionInformation",
             "calories": "250",
-            "proteinContent": "10g"
+            "proteinContent": "10g",
+            "fatContent": "12g",
+            "carbohydrateContent": "30g",
+            "cholesterolContent": "25mg",
+            "sodiumContent": "400mg"
         }
     }
     </script>
@@ -56,13 +60,14 @@
         /* General Styling */
         html { font-size: 100%; font-family: 'Roboto', sans-serif; }
         body { max-width: 100%; margin: auto; font-size: 1.5rem; display: flex; flex-direction: column; align-items: center; }
-        .skip-link { position: absolute; top: -40px; left: 0; background: #0066cc; color: white; padding: 8px; text-decoration: none; }
-        .skip-link:focus { top: 0; }
+
+        /* Typography and Colors */
+        h1 { border: 2px solid black; font-size: clamp(2rem, 5vw, 5em); text-transform: uppercase; text-decoration: underline; font-weight: 900; color: #ff6600; }
+        h2 { text-transform: capitalize; font-size: 2em; text-decoration: overline; color: #333; }
+        p { line-height: 1.5; letter-spacing: 1px; }
 
         /* Header Styling */
         header { width: 100%; text-align: center; background-color: #ffcc80; padding: 2rem; border-bottom: 5px solid #ff6600; }
-        h1 { border: 2px solid black; font-size: clamp(2rem, 5vw, 5em); text-transform: uppercase; text-decoration: underline; font-weight: 900; }
-        h2 { text-transform: capitalize; font-size: 2em; text-decoration: overline; }
 
         /* Navigation */
         nav ul { display: flex; flex-flow: row wrap; justify-content: space-around; background-color: black; color: white; padding: 10px; list-style: none; width: 100%; }
@@ -71,10 +76,14 @@
 
         /* Flexbox Layout */
         .main { display: flex; gap: 10px; flex-flow: row wrap; justify-content: center; padding: 2rem; }
-        .main_article, .secondary_article { margin: auto; max-width: clamp(320px, 40%, 1000px); border: 2px solid #333; padding: 1rem; box-sizing: border-box; }
+        .main_article, .secondary_article { margin: auto; max-width: clamp(320px, 40%, 1000px); border: 2px solid #333; padding: 1rem; box-sizing: border-box; background-color: #fff; }
 
         /* Image Styling */
-        img { max-width: 100%; height: auto; display: block; margin: auto; }
+        img { max-width: 100%; height: auto; display: block; margin: auto; border-radius: 10px; }
+
+        /* Table Formatting */
+        #nutrition-facts { width: 100%; border-collapse: collapse; margin: 1em auto; padding: 1em; }
+        #nutrition-facts th, #nutrition-facts td { border: 1px solid #333; padding: 0.5em; text-align: left; background-color: #ffcc80; }
 
         /* Form Enhancements */
         .form-input, .form-textarea, .form-button { font-size: 1rem; padding: 0.5em; margin: 0.5em; border-radius: 5px; border: 1px solid #333; }
@@ -89,9 +98,6 @@
 
 <body>
 
-    <!-- Skip to Main Content -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-
     <!-- Header -->
     <header>
         <h1>Hawaiian Pizza Sliders Recipe</h1>
@@ -101,80 +107,58 @@
         </figure>
     </header>
 
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="#ingredients" class="nav-link">Ingredients</a></li>
-            <li><a href="#instructions" class="nav-link">Instructions</a></li>
-            <li><a href="#contact" class="nav-link">Contact Info</a></li>
-        </ul>
-    </nav>
+    <!-- Nutrition Facts Table -->
+    <section>
+        <table id="nutrition-facts">
+            <caption>Nutrition Facts</caption>
+            <thead>
+                <tr>
+                    <th>Nutrient</th>
+                    <th>Amount</th>
+                    <th>Daily Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Calories</td><td>250</td><td>12%</td></tr>
+                <tr><td>Protein</td><td>10g</td><td>20%</td></tr>
+                <tr><td>Fat</td><td>12g</td><td>18%</td></tr>
+                <tr><td>Carbohydrates</td><td>30g</td><td>10%</td></tr>
+                <tr><td>Cholesterol</td><td>25mg</td><td>8%</td></tr>
+                <tr><td>Sodium</td><td>400mg</td><td>17%</td></tr>
+            </tbody>
+        </table>
+    </section>
 
-    <main id="main-content">
-
-        <!-- Ingredients Section -->
-        <section id="ingredients">
-            <h2>Ingredients</h2>
-            <ul>
-                <li>12 Hawaiian bread rolls</li>
-                <li>1/2 cup pizza sauce</li>
-                <li>1/4 tsp Italian seasoning</li>
-                <li>6 slices deli-cut ham</li>
-                <li>6 slices mozzarella cheese</li>
-                <li>1/2 cup fresh pineapple chunks</li>
-                <li>1 tbsp unsalted butter</li>
-            </ul>
-        </section>
-
-        <!-- Instructions Section -->
-        <section id="instructions">
-            <h2>Instructions</h2>
-            <ol>
-                <li>Preheat oven to 350°F (175°C).</li>
-                <li>Slice rolls horizontally and place bottoms on a baking sheet.</li>
-                <li>Spread pizza sauce and sprinkle with Italian seasoning.</li>
-                <li>Layer ham, mozzarella, and pineapple chunks.</li>
-                <li>Top with roll tops and brush with melted butter.</li>
-                <li>Bake for 15 minutes or until rolls are golden brown.</li>
-            </ol>
-        </section>
-
-        <!-- Feedback Form -->
-        <section>
-            <form action="#" method="post">
-                <fieldset>
-                    <legend>Rate the Hawaiian Pizza Sliders</legend>
-
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" class="form-input" required>
-
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" class="form-input" required>
-
-                    <label for="rating">Rating:</label>
-                    <select id="rating" name="rating" class="form-input" required>
-                        <option value="5">5 Stars</option>
-                        <option value="4">4 Stars</option>
-                        <option value="3">3 Stars</option>
-                        <option value="2">2 Stars</option>
-                        <option value="1">1 Star</option>
-                    </select>
-
-                    <label for="comments">Leave a Comment:</label>
-                    <textarea id="comments" name="comments" class="form-textarea" placeholder="Share your thoughts..." required></textarea>
-
-                    <button type="submit" class="form-button">Submit</button>
-                </fieldset>
-            </form>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer id="contact">
+    <!-- Contact Info -->
+    <section id="contact">
+        <h2>Contact Info</h2>
         <p>Recipe by Tabitha Goins</p>
         <p>Contact: <a href="mailto:tabithaangel26@gmail.com">tabithaangel26@gmail.com</a></p>
-    </footer>
+    </section>
+
+    <!-- Feedback Form -->
+    <section>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Rate the Hawaiian Pizza Sliders</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" class="form-input" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="form-input" required>
+                <label for="rating">Rating:</label>
+                <select id="rating" name="rating" class="form-input" required>
+                    <option value="5">5 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="2">2 Stars</option>
+                    <option value="1">1 Star</option>
+                </select>
+                <label for="comments">Leave a Comment:</label>
+                <textarea id="comments" name="comments" class="form-textarea" required></textarea>
+                <button type="submit" class="form-button">Submit</button>
+            </fieldset>
+        </form>
+    </section>
 
 </body>
 </html>

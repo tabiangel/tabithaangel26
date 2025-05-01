@@ -1,0 +1,144 @@
+/* Global Styles */
+html {
+    font-size: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    max-width: 100%;
+    margin: auto;
+    font-size: 1.5rem;
+    background-color: #ffe6cc;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav-link:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    width: 100%;
+    text-align: center;
+    background-color: #ffcc80;
+    padding: 2rem;
+    border-bottom: 5px solid #ff6600;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 5em);
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: 900;
+}
+
+/* Typography */
+h2 {
+    text-transform: capitalize;
+    font-size: 2em;
+    text-decoration: overline;
+}
+
+p {
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+/* Main Content Layout */
+.main {
+    display: flex;
+    gap: 10px;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.main_article, .secondary_article {
+    margin: auto;
+    max-width: clamp(320px, 40%, 1000px);
+    border: 2px solid #333;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* Box Model and Spacing */
+.card {
+    margin: 10px;
+    padding: 15px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+/* Flexbox for Responsive Layout */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Form Enhancements */
+.form-input, .form-textarea, .form-button {
+    font-size: 1rem;
+    padding: 0.5em;
+    margin: 0.5em;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+.form-textarea {
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+}
+
+.form-button {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: #ff6600;
+}
+
+/* Image Styling */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #ffcc80;
+    border-top: 5px solid #ff6600;
+}

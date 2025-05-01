@@ -10,7 +10,7 @@
     <meta name="description" content="Delicious recipe for Hawaiian pizza sliders, perfect for parties.">
     <meta name="keywords" content="Hawaiian Pizza Sliders, Quick Recipes, Party Food">
 
-    <!-- JSON-LD Structured Data -->
+    <!-- Enhanced JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -52,7 +52,23 @@
             "carbohydrateContent": "30g",
             "cholesterolContent": "25mg",
             "sodiumContent": "400mg"
-        }
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "150"
+        },
+        "review": [
+            {
+                "@type": "Review",
+                "author": "John Doe",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                },
+                "reviewBody": "Fantastic recipe! Quick and delicious."
+            }
+        ]
     }
     </script>
 
@@ -107,31 +123,16 @@
         </figure>
     </header>
 
-    <!-- Ingredients Section -->
-    <section id="ingredients">
-        <h2>Ingredients</h2>
-        <ul>
-            <li>12 Hawaiian bread rolls</li>
-            <li>1/2 cup pizza sauce</li>
-            <li>1/4 tsp Italian seasoning</li>
-            <li>6 slices deli-cut ham</li>
-            <li>6 slices mozzarella cheese</li>
-            <li>1/2 cup fresh pineapple chunks</li>
-            <li>1 tbsp unsalted butter</li>
-        </ul>
-    </section>
-
-    <!-- Instructions Section -->
-    <section id="instructions">
-        <h2>Instructions</h2>
-        <ol>
-            <li>Preheat oven to 350°F (175°C).</li>
-            <li>Slice rolls horizontally and place bottoms on a baking sheet.</li>
-            <li>Spread pizza sauce and sprinkle with Italian seasoning.</li>
-            <li>Layer ham, mozzarella, and pineapple chunks.</li>
-            <li>Top with roll tops and brush with melted butter.</li>
-            <li>Bake for 15 minutes or until rolls are golden brown.</li>
-        </ol>
+    <!-- Main Content with Flexbox -->
+    <section class="main">
+        <article class="main_article">
+            <h2>Social Media</h2>
+            <p>Follow us on Instagram, X, and Facebook!</p>
+        </article>
+        <article class="main_article">
+            <h2>Enjoy Anytime</h2>
+            <p>This recipe is easy and delicious any day. It is fast so it can even be enjoyed on the weekdays.</p>
+        </article>
     </section>
 
     <!-- Feedback Form -->
